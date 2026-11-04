@@ -16,7 +16,9 @@ export default function Footer() {
           >
             <img
               src={eduedenLogo}
-              alt="EduEden - Play & Grow K-8"
+              alt="EduEden - Play & Grow K-8 Coding Academy"
+              width="140"
+              height="44"
               className="h-10 sm:h-11 w-auto object-contain"
             />
           </a>
@@ -53,11 +55,11 @@ export default function Footer() {
           <ul className="space-y-3 text-sm text-emerald-200">
             <li className="flex items-center gap-2.5">
               <Phone className="w-4 h-4 text-[#f59e0b]" />
-              <span>WhatsApp: +1 (800) 555-EDEN (3336)</span>
+              <span>WhatsApp: +91-9153573335</span>
             </li>
             <li className="flex items-center gap-2.5">
               <Mail className="w-4 h-4 text-[#f59e0b]" />
-              <span>support@edueden.academy</span>
+              <span>support@edueden.online</span>
             </li>
             <li className="flex items-center gap-2.5">
               <MapPin className="w-4 h-4 text-[#f59e0b]" />

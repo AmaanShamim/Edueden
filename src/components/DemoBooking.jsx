@@ -5,9 +5,9 @@ export default function DemoBooking() {
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [formData, setFormData] = useState({
     parentName: "",
+    childName: "",
     childGrade: "",
     parentPhone: "",
-    preferredSchedule: "",
     focusTopic: "Scratch Game Development",
   });
 
@@ -25,9 +25,9 @@ export default function DemoBooking() {
     setFormSubmitted(false);
     setFormData({
       parentName: "",
+      childName: "",
       childGrade: "",
       parentPhone: "",
-      preferredSchedule: "",
       focusTopic: "Scratch Game Development",
     });
   };
@@ -46,13 +46,13 @@ export default function DemoBooking() {
           <h2 className="font-serif-brand text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0c432d] mt-3 tracking-tight">
             Watch Your Child Code Their First Project!
           </h2>
-          <p className="mt-4 text-[#1e4635] leading-relaxed text-base sm:text-lg">
+          <p className="font-body mt-4 text-[#1e4635] leading-relaxed text-base sm:text-lg">
             Join a complimentary 45-minute interactive class. Your child
             will work 1-on-1 or in a tiny cohort with our teacher to create
             an animated game they can proudly share with friends.
           </p>
 
-          <div className="mt-8 space-y-3.5">
+          <div className="mt-8 space-y-3.5 font-body">
             <div className="flex items-center gap-3 text-sm text-[#0c432d] font-semibold">
               <div className="w-7 h-7 rounded-full bg-emerald-200 grid place-items-center text-[#0c432d] font-bold">
                 ✓
@@ -83,7 +83,7 @@ export default function DemoBooking() {
         {/* Right form card */}
         <div className="bg-white rounded-[36px] p-7 sm:p-10 shadow-xl border-2 border-emerald-100">
           {formSubmitted ? (
-            <div className="text-center py-10">
+            <div className="text-center py-10 font-body">
               <div className="w-16 h-16 bg-emerald-100 text-[#10b981] rounded-full flex items-center justify-center mx-auto mb-4">
                 <CheckCircle2 className="w-10 h-10" />
               </div>
@@ -95,23 +95,27 @@ export default function DemoBooking() {
                 <span className="font-bold text-[#0c432d]">
                   {formData.parentName || "Parent"}
                 </span>
-                ! Our academic coordinator will contact your WhatsApp at{" "}
+                ! We can't wait to meet{" "}
+                <span className="font-bold text-[#0c432d]">
+                  {formData.childName || "your child"}
+                </span>
+                . Our academic coordinator will contact your WhatsApp at{" "}
                 <span className="font-bold text-[#0c432d]">
                   {formData.parentPhone || "your number"}
                 </span>{" "}
-                to confirm the meeting link.
+                to schedule your free session.
               </p>
 
               <button
                 onClick={handleReset}
                 type="button"
-                className="mt-6 text-sm font-bold text-[#10b981] hover:text-[#0c432d] underline"
+                className="mt-6 text-sm font-bold text-[#10b981] hover:text-[#0c432d] underline cursor-pointer"
               >
                 Submit another child's enquiry
               </button>
             </div>
           ) : (
-            <form onSubmit={handleSubmit} noValidate>
+            <form onSubmit={handleSubmit} noValidate className="font-body">
               <div className="flex items-center justify-between mb-6">
                 <h3 className="font-serif-brand text-2xl font-bold text-[#0c432d]">
                   Book a Free Trial Session
@@ -122,25 +126,48 @@ export default function DemoBooking() {
               </div>
 
               <div className="space-y-4">
-                <div>
-                  <label
-                    className="block text-xs font-bold uppercase tracking-wider text-[#0c432d] mb-1.5"
-                    htmlFor="parentName"
-                  >
-                    Parent / Guardian Name *
-                  </label>
-                  <input
-                    id="parentName"
-                    name="parentName"
-                    type="text"
-                    required
-                    value={formData.parentName}
-                    onChange={handleInputChange}
-                    placeholder="e.g., Sarah Parker"
-                    className="w-full bg-[#fbfdf9] border-2 border-emerald-100 focus:border-[#10b981] focus:bg-white rounded-2xl px-4 py-3 text-slate-800 placeholder-slate-400 outline-none text-sm transition-all"
-                  />
+                {/* Parent Name & Child Name */}
+                <div className="grid sm:grid-cols-2 gap-4">
+                  <div>
+                    <label
+                      className="block text-xs font-bold uppercase tracking-wider text-[#0c432d] mb-1.5"
+                      htmlFor="parentName"
+                    >
+                      Parent / Guardian Name *
+                    </label>
+                    <input
+                      id="parentName"
+                      name="parentName"
+                      type="text"
+                      required
+                      value={formData.parentName}
+                      onChange={handleInputChange}
+                      placeholder="e.g., Sarah Parker"
+                      className="w-full bg-[#fbfdf9] border-2 border-emerald-100 focus:border-[#10b981] focus:bg-white rounded-2xl px-4 py-3 text-slate-800 placeholder-slate-400 outline-none text-sm transition-all"
+                    />
+                  </div>
+
+                  <div>
+                    <label
+                      className="block text-xs font-bold uppercase tracking-wider text-[#0c432d] mb-1.5"
+                      htmlFor="childName"
+                    >
+                      Child's Name *
+                    </label>
+                    <input
+                      id="childName"
+                      name="childName"
+                      type="text"
+                      required
+                      value={formData.childName}
+                      onChange={handleInputChange}
+                      placeholder="e.g., Leo Parker"
+                      className="w-full bg-[#fbfdf9] border-2 border-emerald-100 focus:border-[#10b981] focus:bg-white rounded-2xl px-4 py-3 text-slate-800 placeholder-slate-400 outline-none text-sm transition-all"
+                    />
+                  </div>
                 </div>
 
+                {/* Child Grade & Phone */}
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div>
                     <label
@@ -189,38 +216,11 @@ export default function DemoBooking() {
                     />
                   </div>
                 </div>
-
-                <div>
-                  <label
-                    className="block text-xs font-bold uppercase tracking-wider text-[#0c432d] mb-1.5"
-                    htmlFor="preferredSchedule"
-                  >
-                    Preferred Demo Timing
-                  </label>
-                  <select
-                    id="preferredSchedule"
-                    name="preferredSchedule"
-                    value={formData.preferredSchedule}
-                    onChange={handleInputChange}
-                    className="w-full bg-[#fbfdf9] border-2 border-emerald-100 focus:border-[#10b981] focus:bg-white rounded-2xl px-4 py-3 text-slate-800 outline-none text-sm transition-all"
-                  >
-                    <option value="">Select a slot...</option>
-                    <option value="weekend-morning">
-                      Saturday / Sunday Morning (10:00 AM)
-                    </option>
-                    <option value="weekend-afternoon">
-                      Saturday / Sunday Afternoon (3:00 PM)
-                    </option>
-                    <option value="weekday-evening">
-                      Weekday Evening (5:30 PM)
-                    </option>
-                  </select>
-                </div>
               </div>
 
               <button
                 type="submit"
-                className="mt-6 w-full bg-[#0c432d] hover:bg-[#15803d] text-white font-extrabold py-4 px-6 rounded-full shadow-lg hover:shadow-xl hover:-translate-y-0.5 active:translate-y-0 transition-all text-base tracking-wide flex items-center justify-center gap-2"
+                className="mt-6 w-full bg-[#0c432d] hover:bg-[#15803d] text-white font-extrabold py-4 px-6 rounded-full shadow-lg hover:shadow-xl hover:-translate-y-0.5 active:translate-y-0 transition-all text-base tracking-wide flex items-center justify-center gap-2 cursor-pointer"
               >
                 <span>Reserve Free Demo Class</span>
                 <Sparkles className="w-4 h-4 text-[#f59e0b]" />
@@ -237,4 +237,3 @@ export default function DemoBooking() {
     </section>
   );
 }
-

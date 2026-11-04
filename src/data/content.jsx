@@ -153,26 +153,84 @@ export const pillars = [
   },
 ];
 
+export const faqCategories = [
+  { id: "all", label: "All Questions" },
+  { id: "curriculum", label: "Curriculum & Tools" },
+  { id: "classes", label: "Classes & Mentors" },
+  { id: "safety", label: "Kid-Safe AI & Ethics" },
+  { id: "booking", label: "Free Demo & Setup" },
+];
+
 export const faqs = [
   {
-    q: "Does my child need prior coding experience?",
-    a: "Not at all! Every EduEden journey begins with friendly drag-and-drop visual logic. We meet each child at their exact skill level.",
+    id: 1,
+    category: "curriculum",
+    q: "Does my child need prior coding, typing, or math experience?",
+    takeaway: "Zero experience needed. We start with friendly drag-and-drop visual logic.",
+    a: "Not at all! Every EduEden journey begins with zero prerequisites. For our Sprouts (K–2) and early Explorers (Grades 3–5), we use intuitive visual block coding (ScratchJr and Scratch 3.0). Children don't even need keyboard typing fluency to begin creating animations and games. Our certified mentors meet each child at their current cognitive level and gently introduce loops, coordinates, and sequencing through playful stories.",
   },
   {
-    q: "What age groups are accepted at EduEden?",
-    a: "We welcome curious kids from Kindergarten through Grade 8 (ages 5 to 14), with distinct cohorts categorized by cognitive development.",
+    id: 2,
+    category: "curriculum",
+    q: "What coding languages and platforms will my child master?",
+    takeaway: "Smooth progression from Scratch visual blocks to real Python syntax & AI models.",
+    a: "We follow an age-progressive roadmap tailored to cognitive developmental milestones:\n• Kindergarten to Grade 2 (Ages 5–7): ScratchJr, visual pattern sequencing, directional algorithms, and animated digital storytelling.\n• Grades 3 to 5 (Ages 8–10): Scratch 3.0 advanced blocks, coordinate physics, collision algorithms, score variables, and Google Teachable Machine image recognition.\n• Grades 6 to 8 (Ages 11–14): Real-world Python syntax, data structures, conditional algorithms, automated bot scripting, and supervised machine learning concepts.",
   },
   {
-    q: "What equipment and setup is required?",
-    a: "A desktop computer or laptop (Mac, Windows, or Chromebook) with a reliable internet connection, microphone, and Google Chrome.",
+    id: 3,
+    category: "curriculum",
+    q: "How is EduEden different from free YouTube tutorials or coding apps?",
+    takeaway: "Live interactive mentorship, computational thinking, and custom project building.",
+    a: "While recorded videos and free coding apps teach children to copy code without understanding, EduEden emphasizes computational problem-solving and creative independence:\n• Small 1:4 Cohorts: Dedicated mentors engage with your child live, asking Socratic questions to encourage self-debugging.\n• Custom Capstones: Instead of cookie-cutter templates, students build games and chatbots around their personal passions—from pet simulators to space arcade platformers.\n• Active Feedback: Mentors provide live encouragement, review code structure, and foster genuine confidence.",
   },
   {
-    q: "How does the Free Demo Class work?",
-    a: "It is a live, fun 45-minute interactive class where your child builds a mini playable project from scratch with a dedicated mentor.",
+    id: 4,
+    category: "safety",
+    q: "How do you ensure safe, age-appropriate exposure to Artificial Intelligence?",
+    takeaway: "Supervised, localized models teaching ethics and digital stewardship.",
+    a: "Child safety and responsible digital citizenship are our highest priorities. We do not expose young learners to unfiltered open-web generative chatbots or unmonitored interfaces. All AI explorations use mentor-supervised sandbox tools—such as kid-safe computer vision classifiers, audio recognition models, and rule-based decision trees. Students learn how machine intelligence works under the hood, how bias affects models, and why human ethics remain indispensable.",
   },
   {
-    q: "How do you ensure safe exposure to Artificial Intelligence?",
-    a: "All AI activities are completely age-appropriate, locally run, or mentor-supervised—focusing on pattern recognition, computer vision concepts, and ethical digital stewardship.",
+    id: 5,
+    category: "safety",
+    q: "How does EduEden support healthy screen time for kids?",
+    takeaway: "Turning passive consumption into creative mastery with scheduled breaks.",
+    a: "We believe screen time should be active, creative, and purposeful rather than passive consumption. All sessions are capped at 45 to 55 minutes, with built-in visual rest breaks, posture check-ins, and collaborative discussions. Students spend class time architecting software and explaining their reasoning, turning screen time into a constructive, pride-building activity.",
+  },
+  {
+    id: 6,
+    category: "classes",
+    q: "What is the cohort size and who are the EduEden mentors?",
+    takeaway: "Maximum 1:4 student-to-mentor ratio led by vetted STEM educators.",
+    a: "To ensure every child receives personalized attention, our group classes never exceed 4 students (1:4 ratio). We also offer 1-on-1 private mentoring. Every EduEden instructor is a vetted computer science or STEM educator who undergoes background verification and intensive training in positive child pedagogy, empathy-driven instruction, and inquiry-based learning.",
+  },
+  {
+    id: 7,
+    category: "classes",
+    q: "Can my child keep, share, and play their projects after class?",
+    takeaway: "Forever access to full project links to share with family and friends.",
+    a: "Yes! Every single game, animation, and Python script created during class belongs entirely to your child. We provide permanent web links and portfolio access so they can proudly play their creations on any computer or tablet, share them with friends, and continue building on them at home anytime.",
+  },
+  {
+    id: 8,
+    category: "booking",
+    q: "What equipment and setup does my child need for online classes?",
+    takeaway: "Just a laptop or computer with Google Chrome, internet, and webcam.",
+    a: "Getting started is effortless:\n1. A laptop or desktop computer (Mac, Windows, or Chromebook) with a reliable internet connection.\n2. A working webcam and microphone for live interaction with their mentor.\n3. The Google Chrome browser.\nNo paid software licenses, complex installations, or high-end graphics cards are required. For Sprouts (K–2), an iPad or tablet can also be used for ScratchJr sessions.",
+  },
+  {
+    id: 9,
+    category: "booking",
+    q: "How does the Free 45-Minute Demo Class work?",
+    takeaway: "Live hands-on class where your child codes a real project from scratch.",
+    a: "Our free demo is a real, live interactive workshop—not a pre-recorded presentation or sales pitch. Your child will pair up with a certified mentor, explore visual logic, and build a working mini-game within 45 minutes. Following the session, the mentor provides parents with a personalized Cognitive Readiness & Milestone Evaluation to help you plan next steps.",
+  },
+  {
+    id: 10,
+    category: "booking",
+    q: "What if we need to reschedule or miss a scheduled class?",
+    takeaway: "Flexible rescheduling with 24 hours notice plus session recordings.",
+    a: "We understand that family schedules can change. We offer flexible class rescheduling with 24 hours notice. If an unexpected emergency occurs, every session includes mentor recap notes, milestone checkpoint reviews, and project cloud saves so your child never falls behind.",
   },
 ];
 

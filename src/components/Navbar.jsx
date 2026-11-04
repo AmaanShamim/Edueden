@@ -10,10 +10,12 @@ export default function Navbar() {
     <header className="sticky top-0 z-50 bg-[#fbfdf9]/90 backdrop-blur-md border-b border-emerald-100/80 shadow-xs">
       <div className="max-w-7xl mx-auto px-5 sm:px-8 py-3.5 flex items-center justify-between gap-4">
         {/* Logo with Brand Tree */}
-        <a href="#home" className="inline-flex items-center group py-1">
+        <a href="#home" className="inline-flex items-center group py-1" aria-label="EduEden Home">
           <img
             src={eduedenLogo}
-            alt="EduEden - Play & Grow K-8"
+            alt="EduEden - Play & Grow K-8 Coding Academy"
+            width="168"
+            height="56"
             className="h-12 sm:h-14 w-auto object-contain transition-transform duration-200 group-hover:scale-105"
           />
         </a>
