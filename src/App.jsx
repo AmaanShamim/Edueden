@@ -1,4 +1,5 @@
 import React from "react";
+import { Analytics } from "@vercel/analytics/react";
 import "./App.css";
 import TopBanner from "./components/TopBanner";
 import Navbar from "./components/Navbar";
@@ -26,6 +27,7 @@ export default function App() {
         <FAQ />
       </main>
       <Footer />
+      <Analytics />
     </div>
   );
 }
