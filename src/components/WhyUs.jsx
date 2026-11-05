@@ -1,4 +1,3 @@
-import React from "react";
 import { pillars } from "../data/content";
 
 export default function WhyUs() {

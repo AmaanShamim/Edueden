@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Sparkles, Menu, X } from "lucide-react";
 import eduedenLogo from "../assets/Logo.png";
 import { navLinks } from "../data/content";

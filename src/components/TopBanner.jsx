@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function TopBanner() {
   return (
     <aside aria-label="Announcement" className="bg-[#0c432d] text-emerald-100 text-xs sm:text-sm font-semibold py-2 px-4 text-center flex items-center justify-center gap-2">

@@ -1,9 +1,8 @@
-import React from "react";
 import { Phone, Mail, MapPin } from "lucide-react";
 import eduedenLogo from "../assets/Logo.png";
 import { navLinks } from "../data/content";
 
-export default function Footer() {
+export default function Footer({ onOpenLegal }) {
   return (
     <footer className="bg-[#0c432d] text-emerald-100 pt-16 pb-12">
       <div className="max-w-7xl mx-auto px-5 sm:px-8 grid md:grid-cols-3 gap-12">
@@ -73,16 +72,28 @@ export default function Footer() {
         <p>
           © {new Date().getFullYear()} EduEden: Play &amp; Grow K-8. All rights reserved.
         </p>
-        <div className="flex gap-6">
-          <a href="#privacy" className="hover:underline">
+        <div className="flex flex-wrap gap-4 sm:gap-6">
+          <button
+            type="button"
+            onClick={() => (onOpenLegal ? onOpenLegal("privacy") : (window.location.hash = "#privacy"))}
+            className="hover:underline hover:text-white transition-colors cursor-pointer text-xs text-emerald-300"
+          >
             Privacy Policy
-          </a>
-          <a href="#terms" className="hover:underline">
+          </button>
+          <button
+            type="button"
+            onClick={() => (onOpenLegal ? onOpenLegal("safety") : (window.location.hash = "#safety-charter"))}
+            className="hover:underline hover:text-white transition-colors cursor-pointer text-xs text-emerald-300"
+          >
             Student Safety Charter
-          </a>
-          <a href="#code" className="hover:underline">
+          </button>
+          <button
+            type="button"
+            onClick={() => (onOpenLegal ? onOpenLegal("pedagogy") : (window.location.hash = "#pedagogy-standards"))}
+            className="hover:underline hover:text-white transition-colors cursor-pointer text-xs text-emerald-300"
+          >
             Pedagogy Standards
-          </a>
+          </button>
         </div>
       </div>
     </footer>

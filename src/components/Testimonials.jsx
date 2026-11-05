@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect } from "react";
 import {
   Star,
   CheckCircle2,
@@ -181,7 +181,7 @@ export default function Testimonials() {
           <div
             ref={scrollContainerRef}
             onScroll={updateScrollState}
-            className="flex gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory py-4 px-1 [&::-webkit-scrollbar]:hidden"
+            className="flex gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory py-4 px-1 no-scrollbar [&::-webkit-scrollbar]:hidden"
             style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
           >
             {filteredTestimonials.map((item) => (

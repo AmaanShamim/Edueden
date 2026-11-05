@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect } from "react";
 import {
   CheckCircle2,
   Sparkles,
@@ -472,7 +472,7 @@ export default function DemoBooking() {
 
                       {/* Custom Country Code Dropdown Popover */}
                       {isCountryOpen && (
-                        <div className="absolute top-full left-0 mt-2 w-72 max-h-64 overflow-y-auto bg-white rounded-2xl border-2 border-emerald-100 shadow-2xl p-2 z-50 animate-fadeIn">
+                        <div className="absolute top-full left-0 mt-2 w-72 max-h-64 overflow-y-auto slim-scrollbar bg-white rounded-2xl border-2 border-emerald-100 shadow-2xl p-2 z-50 animate-fadeIn">
                           <div className="text-[10px] uppercase font-bold text-[#15803d] px-2.5 py-1 tracking-wider">
                             Select Country Code
                           </div>

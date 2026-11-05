@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { CheckCircle2, ArrowRight, Sparkles } from "lucide-react";
 import { playpaths, playpathTabs } from "../data/content";
 
