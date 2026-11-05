@@ -117,23 +117,23 @@ export default function Navbar() {
         {/* Desktop Navigation */}
         <nav
           aria-label="Main navigation"
-          className="hidden md:flex items-center gap-6 lg:gap-8 font-semibold text-[15px]"
+          className="hidden md:flex items-center gap-3.5 lg:gap-7 xl:gap-8 font-semibold text-xs sm:text-sm lg:text-[15px]"
         >
           {navLinks.map((link) => (
             <a
               key={link.href}
               href={link.href}
-              className="text-[#0e2a1d] hover:text-[#10b981] transition-colors"
+              className="text-[#0e2a1d] hover:text-[#10b981] transition-colors whitespace-nowrap"
             >
               {link.label}
             </a>
           ))}
           <a
             href="#free-demo"
-            className="bg-[#0c432d] hover:bg-[#15803d] text-white rounded-full px-5 py-2.5 text-sm font-bold shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 flex items-center gap-1.5"
+            className="bg-[#0c432d] hover:bg-[#15803d] text-white rounded-full px-3.5 py-2 lg:px-5 lg:py-2.5 text-xs lg:text-sm font-bold shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 flex items-center gap-1.5 whitespace-nowrap shrink-0"
           >
             <span>Book Free Demo</span>
-            <Sparkles className="w-4 h-4 text-[#f59e0b]" />
+            <Sparkles className="w-3.5 h-3.5 lg:w-4 lg:h-4 text-[#f59e0b] shrink-0" />
           </a>
         </nav>
 
@@ -191,12 +191,12 @@ export default function Navbar() {
           {/* Floating Dropdown Card (absolutely positioned to hover over webpage without pushing content) */}
           <nav
             aria-label="Mobile navigation"
-            className={`absolute top-full left-0 right-0 z-50 md:hidden px-4 pt-3 pb-6 pointer-events-auto max-h-[calc(100vh-80px)] overflow-y-auto ${
+            className={`absolute top-full left-0 right-0 z-50 md:hidden px-3.5 sm:px-4 pt-2.5 sm:pt-3 pb-6 pointer-events-auto max-h-[calc(100dvh-80px)] overflow-y-auto overscroll-contain ${
               isClosing ? "animate-menuSlideUp" : "animate-menuSlideDown"
             }`}
             style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
           >
-            <div className="max-w-md mx-auto bg-white/95 backdrop-blur-2xl border-2 border-emerald-100/90 rounded-3xl p-4 sm:p-5 shadow-[0_25px_60px_-15px_rgba(12,67,45,0.25)] flex flex-col gap-2 ring-1 ring-emerald-900/5">
+            <div className="max-w-md mx-auto bg-white/95 backdrop-blur-2xl border-2 border-emerald-100/90 rounded-3xl p-3.5 sm:p-5 shadow-[0_25px_60px_-15px_rgba(12,67,45,0.25)] flex flex-col gap-2 ring-1 ring-emerald-900/5">
               {/* Header inside card */}
               <div className="flex items-center justify-between px-1.5 pb-2.5 border-b border-emerald-100/70">
                 <span className="inline-flex items-center gap-1.5 text-[11px] font-extrabold uppercase tracking-wider text-[#15803d] bg-emerald-50 border border-emerald-200/70 px-2.5 py-0.5 rounded-full">
@@ -217,20 +217,20 @@ export default function Navbar() {
                     onClick={closeMenu}
                     className="group flex items-center justify-between p-2.5 sm:p-3 rounded-2xl bg-emerald-50/40 hover:bg-emerald-50/90 border border-emerald-100/60 hover:border-emerald-200 transition-all duration-200 active:scale-[0.99]"
                   >
-                    <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 rounded-xl bg-white border border-emerald-100 shadow-2xs flex items-center justify-center text-[#15803d] group-hover:scale-105 group-hover:bg-[#0c432d] group-hover:text-emerald-300 transition-all duration-200">
+                    <div className="flex items-center gap-3 min-w-0">
+                      <div className="w-9 h-9 sm:w-10 sm:h-10 shrink-0 rounded-xl bg-white border border-emerald-100 shadow-2xs flex items-center justify-center text-[#15803d] group-hover:scale-105 group-hover:bg-[#0c432d] group-hover:text-emerald-300 transition-all duration-200">
                         {link.icon}
                       </div>
-                      <div>
-                        <div className="font-bold text-sm sm:text-[15px] text-[#0c432d] group-hover:text-[#15803d] transition-colors">
+                      <div className="min-w-0 flex-1">
+                        <div className="font-bold text-sm sm:text-[15px] text-[#0c432d] group-hover:text-[#15803d] transition-colors truncate sm:whitespace-normal">
                           {link.label}
                         </div>
-                        <div className="text-[11px] sm:text-xs text-[#1e4635]/75 font-medium">
+                        <div className="text-[11px] sm:text-xs text-[#1e4635]/75 font-medium leading-tight line-clamp-1 sm:line-clamp-none">
                           {link.desc}
                         </div>
                       </div>
                     </div>
-                    <ChevronRight className="w-4 h-4 text-emerald-400 group-hover:text-[#10b981] group-hover:translate-x-0.5 transition-all duration-200" />
+                    <ChevronRight className="w-4 h-4 text-emerald-400 group-hover:text-[#10b981] group-hover:translate-x-0.5 transition-all duration-200 shrink-0 ml-2" />
                   </a>
                 ))}
               </div>
@@ -240,22 +240,22 @@ export default function Navbar() {
                 <a
                   href="#free-demo"
                   onClick={closeMenu}
-                  className="group relative overflow-hidden bg-gradient-to-r from-[#0c432d] via-[#0e4e35] to-[#15803d] text-white rounded-2xl p-3.5 sm:p-4 font-bold shadow-lg shadow-emerald-900/15 flex items-center justify-between hover:shadow-xl active:scale-[0.99] transition-all duration-200"
+                  className="group relative overflow-hidden bg-gradient-to-r from-[#0c432d] via-[#0e4e35] to-[#15803d] text-white rounded-2xl p-3 sm:p-4 font-bold shadow-lg shadow-emerald-900/15 flex items-center justify-between hover:shadow-xl active:scale-[0.99] transition-all duration-200"
                 >
-                  <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-xl bg-white/15 backdrop-blur-xs flex items-center justify-center text-[#f59e0b] shadow-2xs">
+                  <div className="flex items-center gap-2.5 sm:gap-3 min-w-0">
+                    <div className="w-9 h-9 sm:w-10 sm:h-10 shrink-0 rounded-xl bg-white/15 backdrop-blur-xs flex items-center justify-center text-[#f59e0b] shadow-2xs">
                       <Sparkles className="w-5 h-5 fill-[#f59e0b]" />
                     </div>
-                    <div className="text-left">
-                      <div className="text-sm font-extrabold tracking-wide flex items-center gap-1.5">
+                    <div className="text-left min-w-0">
+                      <div className="text-xs sm:text-sm font-extrabold tracking-wide flex items-center gap-1.5 truncate">
                         <span>Book Free Demo Class</span>
                       </div>
-                      <div className="text-[11px] sm:text-xs text-emerald-200 font-medium">
+                      <div className="text-[10px] sm:text-xs text-emerald-200 font-medium truncate">
                         1:4 live session • 100% free • 45 mins
                       </div>
                     </div>
                   </div>
-                  <ArrowRight className="w-5 h-5 text-emerald-300 group-hover:translate-x-1 transition-transform" />
+                  <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 text-emerald-300 group-hover:translate-x-1 transition-transform shrink-0 ml-2" />
                 </a>
               </div>
             </div>

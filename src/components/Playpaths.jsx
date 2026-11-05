@@ -41,7 +41,7 @@ export default function Playpaths() {
         </div>
 
         {/* Active Playpath Detail Card */}
-        <div className="mt-8 max-w-4xl mx-auto bg-white rounded-[36px] border-2 border-emerald-100 p-8 sm:p-12 shadow-lg relative overflow-hidden">
+        <div className="mt-8 max-w-4xl mx-auto bg-white rounded-[32px] sm:rounded-[36px] border-2 border-emerald-100 p-6 sm:p-10 lg:p-12 shadow-lg relative overflow-hidden">
           <div className="grid md:grid-cols-[1.4fr_1fr] gap-8 items-center">
             <div>
               <span className="inline-block bg-emerald-100 text-[#0c432d] font-bold text-xs uppercase tracking-wider px-3 py-1 rounded-full mb-3">

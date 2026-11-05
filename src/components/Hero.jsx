@@ -9,12 +9,12 @@ export default function Hero() {
       <div className="max-w-7xl mx-auto px-5 sm:px-8 grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
         {/* Left Column: Headlines & CTA */}
         <div className="z-10">
-          <div className="inline-flex items-center gap-2 rounded-full bg-emerald-100/80 border border-emerald-300 px-4 py-1.5 font-bold text-[#0c432d] text-xs sm:text-sm tracking-wide mb-6">
-            <span className="w-2 h-2 rounded-full bg-[#10b981]" />
-            <span>K-8 Scratch Programming + Creative AI Playground</span>
+          <div className="inline-flex items-center gap-2 rounded-full bg-emerald-100/80 border border-emerald-300 px-3.5 sm:px-4 py-1.5 font-bold text-[#0c432d] text-[11px] sm:text-sm tracking-wide mb-6 max-w-full">
+            <span className="w-2 h-2 rounded-full bg-[#10b981] shrink-0" />
+            <span className="truncate sm:whitespace-normal">K-8 Scratch Programming + Creative AI Playground</span>
           </div>
 
-          <h1 className="font-serif-brand font-bold text-4xl sm:text-5xl lg:text-6xl text-[#0c432d] tracking-tight leading-[1.1]">
+          <h1 className="font-serif-brand font-bold text-3xl sm:text-5xl lg:text-6xl text-[#0c432d] tracking-tight leading-[1.15] sm:leading-[1.1]">
             Where Young Minds{" "}
             <span className="text-[#10b981]">Play, Code</span> &amp;{" "}
             <span className="text-[#f59e0b]">Grow!</span>
