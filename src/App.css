@@ -44,70 +44,37 @@ body {
 }
 
 /* ==========================================================================
-   Custom Themed Scrollbars (EduEden Emerald Theme)
+   Completely Hide Scrollbars Globally (Clean App-Like Scroll Experience)
    ========================================================================== */
 
-/* Global WebKit scrollbars (Chrome, Safari, Edge, Opera) */
-::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
-}
-
-::-webkit-scrollbar-track {
-  background: #f0fdf4;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #6ee7b7;
-  border-radius: 9999px;
-  border: 2px solid #f0fdf4;
-  transition: background-color 0.2s ease;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #10b981;
-}
-
-::-webkit-scrollbar-thumb:active {
-  background: #0c432d;
-}
-
-/* Firefox Global Scrollbar */
-html {
-  scrollbar-width: thin;
-  scrollbar-color: #10b981 #f0fdf4;
-}
-
-/* Slim Scrollbar for inner modals and dropdowns */
-.slim-scrollbar::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
-}
-
-.slim-scrollbar::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-.slim-scrollbar::-webkit-scrollbar-thumb {
-  background: #a7f3d0;
-  border-radius: 9999px;
-}
-
-.slim-scrollbar::-webkit-scrollbar-thumb:hover {
-  background: #10b981;
-}
-
-.slim-scrollbar {
-  scrollbar-width: thin;
-  scrollbar-color: #a7f3d0 transparent;
-}
-
-/* Utility to completely remove scrollbars where needed */
-.no-scrollbar::-webkit-scrollbar {
+/* WebKit (Chrome, Safari, Edge, Opera) */
+::-webkit-scrollbar,
+html::-webkit-scrollbar,
+body::-webkit-scrollbar,
+*::-webkit-scrollbar {
   display: none !important;
+  width: 0 !important;
+  height: 0 !important;
 }
 
-.no-scrollbar {
-  -ms-overflow-style: none !important;
+/* Firefox & Standard */
+html, body, * {
   scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
+}
+
+/* ==========================================================================
+   Continuous Pulsing WhatsApp Glow
+   ========================================================================== */
+@keyframes whatsappPulse {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(37, 211, 102, 0.45), 0 0 35px rgba(37, 211, 102, 0.25);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(37, 211, 102, 0.9), 0 0 60px rgba(37, 211, 102, 0.5);
+  }
+}
+
+.whatsapp-glow {
+  animation: whatsappPulse 2s ease-in-out infinite;
 }

@@ -12,6 +12,7 @@ import DemoBooking from "./components/DemoBooking";
 import FAQ from "./components/FAQ";
 import Footer from "./components/Footer";
 import LegalModal from "./components/LegalModal";
+import WhatsAppButton from "./components/WhatsAppButton";
 
 export default function App() {
   const [legalDoc, setLegalDoc] = useState(null); // "privacy" | "safety" | "pedagogy" | null
@@ -87,6 +88,7 @@ export default function App() {
         <FAQ />
       </main>
       <Footer onOpenLegal={handleOpenLegal} />
+      <WhatsAppButton />
       <LegalModal
         isOpen={Boolean(legalDoc)}
         activeTab={legalDoc || "privacy"}

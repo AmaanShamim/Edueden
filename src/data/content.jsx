@@ -244,6 +244,7 @@ export const testimonials = [
     highlight: "Transformed gaming screen time into real game building",
     quote:
       "My 8-year-old went from just watching video game streamers to coding her own puppy-chase game in Scratch within three sessions. The mentors at EduEden are remarkably patient and encouraging!",
+    avatar: "/testimonials/parent-anita.jpg",
     initials: "AS",
     avatarBg: "bg-emerald-100 text-[#0c432d]",
   },
@@ -257,6 +258,7 @@ export const testimonials = [
     highlight: "Screen-healthy, playful & zero frustration",
     quote:
       "We were skeptical about coding for a 6-year-old, but EduEden’s visual block approach felt just like digital Lego. Marcus created an interactive talking dinosaur story and proudly presented it to his grandparents!",
+    avatar: "/testimonials/parent-david.jpg",
     initials: "DC",
     avatarBg: "bg-amber-100 text-[#a16207]",
   },
@@ -270,6 +272,7 @@ export const testimonials = [
     highlight: "Seamless jump from visual blocks to Python",
     quote:
       "Leo was getting bored with drag-and-drop coding. EduEden transitioned him smoothly to real Python syntax. He just programmed a weather bot and his school math confidence has noticeably improved!",
+    avatar: "/testimonials/parent-sarah.jpg",
     initials: "SJ",
     avatarBg: "bg-teal-100 text-[#115e59]",
   },
@@ -283,6 +286,7 @@ export const testimonials = [
     highlight: "Tiny 1:4 ratio where shy kids flourish",
     quote:
       "The 1:4 student-to-mentor ratio is unmatched. Ananya is usually shy in online groups, but her teacher created such a warm space where bugs were celebrated as learning puzzles.",
+    avatar: "/testimonials/parent-vikram.jpg",
     initials: "VP",
     avatarBg: "bg-green-100 text-[#166534]",
   },
@@ -296,6 +300,7 @@ export const testimonials = [
     highlight: "Creators, not just passive consumers",
     quote:
       "Instead of passively consuming Roblox all weekend, Misha is now designing his own 2D obstacle courses with custom gravity physics and countdown timers. It's the best after-school program we've joined.",
+    avatar: "/testimonials/parent-elena.jpg",
     initials: "ER",
     avatarBg: "bg-emerald-100 text-[#0c432d]",
   },
@@ -309,6 +314,7 @@ export const testimonials = [
     highlight: "Joyful learning that kids genuinely look forward to",
     quote:
       "EduEden teaches algorithmic problem solving disguised as pure play. Maya counts down the hours until her Saturday coding session with her mentor Coach Jenny!",
+    avatar: "/testimonials/parent-marcus.jpg",
     initials: "MB",
     avatarBg: "bg-amber-100 text-[#a16207]",
   },

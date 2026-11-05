@@ -37,6 +37,20 @@ export default function Testimonials() {
     setCanScrollRight(scrollLeft + clientWidth < scrollWidth - 15);
   };
 
+  // Calculate the exact distance to slide precisely ONE review card (card width + gap)
+  const getCardScrollStep = () => {
+    if (!scrollContainerRef.current) return 380;
+    const cards = scrollContainerRef.current.querySelectorAll("[data-testimonial-card]");
+    if (cards.length >= 2) {
+      const delta = cards[1].offsetLeft - cards[0].offsetLeft;
+      if (delta > 0) return delta;
+    }
+    if (cards.length === 1) {
+      return cards[0].offsetWidth + 24;
+    }
+    return 380;
+  };
+
   useEffect(() => {
     if (scrollContainerRef.current) {
       scrollContainerRef.current.scrollTo({ left: 0, behavior: "smooth" });
@@ -52,12 +66,43 @@ export default function Testimonials() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  // Intercept horizontal scroll/wheel gestures so it slides strictly one review at a time
+  useEffect(() => {
+    const container = scrollContainerRef.current;
+    if (!container) return;
+
+    let isThrottled = false;
+
+    const handleWheel = (e) => {
+      const isHorizontal = Math.abs(e.deltaX) > Math.abs(e.deltaY) || e.shiftKey;
+      if (isHorizontal && (Math.abs(e.deltaX) > 8 || (e.shiftKey && Math.abs(e.deltaY) > 8))) {
+        e.preventDefault();
+        if (isThrottled) return;
+
+        isThrottled = true;
+        const step = getCardScrollStep();
+        const direction = e.deltaX > 0 || (e.shiftKey && e.deltaY > 0) ? 1 : -1;
+
+        container.scrollBy({
+          left: direction * step,
+          behavior: "smooth",
+        });
+
+        setTimeout(() => {
+          isThrottled = false;
+        }, 380);
+      }
+    };
+
+    container.addEventListener("wheel", handleWheel, { passive: false });
+    return () => container.removeEventListener("wheel", handleWheel);
+  }, []);
+
   const handleScroll = (direction) => {
     if (!scrollContainerRef.current) return;
-    const { clientWidth } = scrollContainerRef.current;
-    const scrollAmount = clientWidth > 768 ? clientWidth * 0.7 : clientWidth * 0.85;
+    const step = getCardScrollStep();
     scrollContainerRef.current.scrollBy({
-      left: direction === "left" ? -scrollAmount : scrollAmount,
+      left: direction === "left" ? -step : step,
       behavior: "smooth",
     });
   };
@@ -187,7 +232,8 @@ export default function Testimonials() {
             {filteredTestimonials.map((item) => (
               <div
                 key={item.id}
-                className="w-[88%] sm:w-[360px] md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] shrink-0 snap-start bg-white rounded-[28px] p-7 border-2 border-emerald-100/90 shadow-xs hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between"
+                data-testimonial-card
+                className="w-[88%] sm:w-[360px] md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] shrink-0 snap-start snap-always bg-white rounded-[28px] p-7 border-2 border-emerald-100/90 shadow-xs hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between"
               >
                 <div>
                   {/* Header: Stars & Track badge */}
@@ -217,10 +263,25 @@ export default function Testimonials() {
                 {/* Author footer */}
                 <div className="mt-6 pt-5 border-t border-emerald-100 flex items-center justify-between">
                   <div className="flex items-center gap-3">
-                    <div
-                      className={`w-10 h-10 rounded-full ${item.avatarBg} font-bold text-sm flex items-center justify-center shrink-0 shadow-2xs`}
-                    >
-                      {item.initials}
+                    <div className="relative w-11 h-11 shrink-0">
+                      {item.avatar && (
+                        <img
+                          src={item.avatar}
+                          alt={item.name}
+                          width="44"
+                          height="44"
+                          loading="lazy"
+                          className="w-11 h-11 rounded-full object-cover border-2 border-emerald-200/90 shadow-2xs"
+                          onError={(e) => {
+                            e.currentTarget.style.display = "none";
+                          }}
+                        />
+                      )}
+                      <div
+                        className={`w-11 h-11 rounded-full ${item.avatarBg} font-bold text-sm flex items-center justify-center border-2 border-emerald-200/90 shadow-2xs absolute inset-0 -z-10`}
+                      >
+                        {item.initials}
+                      </div>
                     </div>
                     <div>
                       <div className="font-bold text-sm text-[#0c432d] flex items-center gap-1.5">
