@@ -43,6 +43,83 @@ body {
   animation: fadeIn 0.2s ease-out forwards;
 }
 
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.animate-fadeOut {
+  animation: fadeOut 0.2s ease-in forwards;
+}
+
+@keyframes backdropFadeIn {
+  0% {
+    opacity: 0;
+    -webkit-backdrop-filter: blur(0px);
+    backdrop-filter: blur(0px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+  }
+}
+
+@keyframes backdropFadeOut {
+  0% {
+    opacity: 1;
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+  }
+  100% {
+    opacity: 0;
+    -webkit-backdrop-filter: blur(0px);
+    backdrop-filter: blur(0px);
+  }
+}
+
+.animate-backdropIn {
+  animation: backdropFadeIn 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-backdropOut {
+  animation: backdropFadeOut 0.2s cubic-bezier(0.4, 0, 1, 1) forwards;
+}
+
+@keyframes menuSlideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px) scale(0.98);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.animate-menuSlideDown {
+  animation: menuSlideDown 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes menuSlideUp {
+  0% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-10px) scale(0.98);
+  }
+}
+
+.animate-menuSlideUp {
+  animation: menuSlideUp 0.2s cubic-bezier(0.4, 0, 1, 1) forwards;
+}
+
 /* ==========================================================================
    Completely Hide Scrollbars Globally (Clean App-Like Scroll Experience)
    ========================================================================== */
