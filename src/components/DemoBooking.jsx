@@ -51,10 +51,8 @@ const GRADE_OPTIONS = [
   },
 ];
 
-// Google Apps Script Web App Endpoint
-const GOOGLE_SCRIPT_URL =
-  import.meta.env.VITE_GOOGLE_APPS_SCRIPT_URL ||
-  "https://script.google.com/macros/s/AKfycbxvTq0uR-7K5Gk4kjJbsO-honOOCG4yJPzUVl0-2-NR1UNQYGfX4ILzqEv90Np_w7C6Cw/exec";
+// Google Apps Script Web App Endpoint (configured via .env or hosting environment variables)
+const GOOGLE_SCRIPT_URL = import.meta.env.VITE_GOOGLE_APPS_SCRIPT_URL || "";
 
 export default function DemoBooking() {
   const [formSubmitted, setFormSubmitted] = useState(false);
