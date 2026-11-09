@@ -292,7 +292,7 @@ export default function DemoBooking() {
         </div>
 
         {/* Right form card */}
-        <div className="min-w-0 bg-white rounded-[36px] p-7 sm:p-10 shadow-xl border-2 border-emerald-100">
+        <div className="min-w-0 bg-white rounded-[28px] sm:rounded-[36px] p-5 sm:p-8 md:p-10 shadow-xl border-2 border-emerald-100">
           {formSubmitted ? (
             <div className="text-center py-10 font-body animate-fadeIn">
               <div className="w-16 h-16 bg-emerald-100 text-[#10b981] rounded-full flex items-center justify-center mx-auto mb-4">
@@ -470,7 +470,7 @@ export default function DemoBooking() {
 
                       {/* Custom Country Code Dropdown Popover */}
                       {isCountryOpen && (
-                        <div className="absolute top-full left-0 mt-2 w-72 max-h-64 overflow-y-auto slim-scrollbar bg-white rounded-2xl border-2 border-emerald-100 shadow-2xl p-2 z-50 animate-fadeIn">
+                        <div className="absolute top-full left-0 mt-2 w-72 max-w-[calc(100vw-3.5rem)] max-h-64 overflow-y-auto slim-scrollbar bg-white rounded-2xl border-2 border-emerald-100 shadow-2xl p-2 z-50 animate-fadeIn">
                           <div className="text-[10px] uppercase font-bold text-[#15803d] px-2.5 py-1 tracking-wider">
                             Select Country Code
                           </div>

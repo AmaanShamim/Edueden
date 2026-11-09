@@ -10,6 +10,7 @@ import WhyUs from "./components/WhyUs";
 import Testimonials from "./components/Testimonials";
 import DemoBooking from "./components/DemoBooking";
 import FAQ from "./components/FAQ";
+import Founder from "./components/Founder";
 import Footer from "./components/Footer";
 import LegalModal from "./components/LegalModal";
 import WhatsAppButton from "./components/WhatsAppButton";
@@ -85,6 +86,7 @@ export default function App() {
         <WhyUs />
         <Testimonials />
         <DemoBooking />
+        <Founder />
         <FAQ />
       </main>
       <Footer onOpenLegal={handleOpenLegal} />

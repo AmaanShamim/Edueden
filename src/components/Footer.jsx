@@ -43,6 +43,12 @@ export default function Footer({ onOpenLegal }) {
                 {link.label}
               </a>
             ))}
+            <a
+              href="#founder"
+              className="hover:text-[#f59e0b] transition-colors w-fit"
+            >
+              Founder's Vision
+            </a>
           </nav>
         </div>
 
