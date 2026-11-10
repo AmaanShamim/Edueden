@@ -44,6 +44,18 @@ export default function Footer({ onOpenLegal }) {
               </a>
             ))}
             <a
+              href="#projects"
+              className="hover:text-[#f59e0b] transition-colors w-fit"
+            >
+              Student Projects
+            </a>
+            <a
+              href="#how-it-works"
+              className="hover:text-[#f59e0b] transition-colors w-fit"
+            >
+              How It Works
+            </a>
+            <a
               href="#founder"
               className="hover:text-[#f59e0b] transition-colors w-fit"
             >

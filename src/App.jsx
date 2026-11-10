@@ -4,10 +4,13 @@ import "./App.css";
 import TopBanner from "./components/TopBanner";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
+import TrustBar from "./components/TrustBar";
+import ProblemSolution from "./components/ProblemSolution";
 import Playpaths from "./components/Playpaths";
-import Courses from "./components/Courses";
 import WhyUs from "./components/WhyUs";
+import ProjectShowcase from "./components/ProjectShowcase";
 import Testimonials from "./components/Testimonials";
+import HowItWorks from "./components/HowItWorks";
 import DemoBooking from "./components/DemoBooking";
 import FAQ from "./components/FAQ";
 import Founder from "./components/Founder";
@@ -81,10 +84,13 @@ export default function App() {
       <Navbar />
       <main>
         <Hero />
+        <TrustBar />
+        <ProblemSolution />
         <Playpaths />
-        <Courses />
         <WhyUs />
+        <ProjectShowcase />
         <Testimonials />
+        <HowItWorks />
         <DemoBooking />
         <Founder />
         <FAQ />

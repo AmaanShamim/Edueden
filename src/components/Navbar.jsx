@@ -9,6 +9,8 @@ import {
   HelpCircle,
   ChevronRight,
   ArrowRight,
+  Trophy,
+  Calendar,
 } from "lucide-react";
 import eduedenLogo from "../assets/Logo.png";
 import { navLinks } from "../data/content";
@@ -27,10 +29,22 @@ const mobileNavLinks = [
     icon: <Gamepad2 className="w-5 h-5" />,
   },
   {
+    label: "Student Projects",
+    href: "#projects",
+    desc: "Real games & AI builds by kids",
+    icon: <Trophy className="w-5 h-5 text-emerald-600" />,
+  },
+  {
     label: "Why EduEden",
     href: "#why",
     desc: "Our 1:4 mentor philosophy & safety",
     icon: <HeartHandshake className="w-5 h-5" />,
+  },
+  {
+    label: "How It Works",
+    href: "#how-it-works",
+    desc: "From free demo to first game",
+    icon: <Calendar className="w-5 h-5 text-amber-500" />,
   },
   {
     label: "Parent Stories",

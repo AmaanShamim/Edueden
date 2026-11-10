@@ -7,7 +7,7 @@ export default function Playpaths() {
   const currentPath = playpaths[activeTab];
 
   return (
-    <section id="playpaths" className="py-20 lg:py-28 bg-[#fbfdf9]">
+    <section id="playpaths" className="py-20 lg:py-28 bg-[#fbfdf9] border-b border-emerald-100">
       <div className="max-w-7xl mx-auto px-5 sm:px-8">
         <div className="text-center max-w-3xl mx-auto">
           <span className="text-[#15803d] font-extrabold uppercase tracking-widest text-xs sm:text-sm bg-emerald-50 border border-emerald-200 px-3.5 py-1 rounded-full">
