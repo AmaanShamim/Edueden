@@ -18,7 +18,6 @@ import Founder from "./components/Founder";
 import Footer from "./components/Footer";
 import LegalModal from "./components/LegalModal";
 import WhatsAppButton from "./components/WhatsAppButton";
-import StickyMobileCTA from "./components/StickyMobileCTA";
 import CookieBanner from "./components/CookieBanner";
 
 export default function App() {
@@ -107,7 +106,6 @@ export default function App() {
         onClose={handleCloseLegal}
         onTabChange={(type) => handleOpenLegal(type)}
       />
-      <StickyMobileCTA />
       <CookieBanner onOpenPrivacy={handleOpenLegal} />
       <Analytics />
       <SpeedInsights />
