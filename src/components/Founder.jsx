@@ -40,8 +40,8 @@ export default function Founder() {
                 <img
                   src="/founder/shivani-gupta.jpg"
                   alt="Shivani Gupta - Founder & CEO of EduEden"
-                  width="707"
-                  height="1024"
+                  width="480"
+                  height="695"
                   loading="lazy"
                   className="w-full h-auto object-contain block transition-transform duration-500 group-hover:scale-[1.02]"
                 />

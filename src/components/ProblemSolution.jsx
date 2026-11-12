@@ -63,16 +63,18 @@ export default function ProblemSolution() {
         {/* Comparison Grid: Problem vs Solution */}
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-10 items-stretch">
           {/* Problem Card (Passive Consumption) */}
-          <div className="bg-gradient-to-b from-rose-50/60 to-orange-50/40 rounded-[32px] sm:rounded-[36px] p-6 sm:p-9 border-2 border-rose-200/70 shadow-sm flex flex-col justify-between relative overflow-hidden">
+          <div className="bg-gradient-to-b from-rose-50/70 to-orange-50/40 rounded-[32px] sm:rounded-[36px] p-6 sm:p-9 border-2 border-rose-300/80 shadow-sm flex flex-col justify-between relative overflow-hidden">
             <div className="absolute top-0 right-0 w-40 h-40 bg-rose-200/20 rounded-full blur-3xl pointer-events-none" />
 
             <div>
-              <div className="flex items-center justify-between mb-6">
-                <span className="inline-flex items-center gap-2 bg-rose-100 text-rose-800 font-extrabold text-xs uppercase tracking-wider px-3.5 py-1.5 rounded-full border border-rose-300">
-                  <Smartphone className="w-3.5 h-3.5 text-rose-600" />
+              <div className="flex flex-wrap items-center justify-between gap-2.5 mb-6">
+                <span className="inline-flex items-center gap-1.5 bg-rose-100 text-rose-800 font-bold text-xs px-3.5 py-1.5 rounded-full border border-rose-300 shadow-2xs whitespace-nowrap shrink-0">
+                  <Smartphone className="w-3.5 h-3.5 text-rose-600 shrink-0" />
                   <span>The Typical Screen Trap</span>
                 </span>
-                <span className="text-xs font-bold text-rose-600/90">Passive Consumer</span>
+                <span className="inline-flex items-center text-xs font-bold text-rose-700 bg-white/80 border border-rose-200/90 px-3 py-1 rounded-full whitespace-nowrap shrink-0">
+                  Passive Consumer
+                </span>
               </div>
 
               <h3 className="font-serif-brand font-bold text-xl sm:text-2xl text-slate-800 mb-6">
@@ -81,9 +83,9 @@ export default function ProblemSolution() {
 
               <div className="space-y-4">
                 {problems.map((item, idx) => (
-                  <div key={idx} className="flex items-start gap-3.5 p-3.5 rounded-2xl bg-white/70 border border-rose-100 shadow-2xs">
+                  <div key={idx} className="flex items-start gap-3.5 p-3.5 rounded-2xl bg-white/80 border border-rose-200/70 shadow-2xs">
                     <XCircle className="w-5 h-5 text-rose-500 shrink-0 mt-0.5" />
-                    <div>
+                    <div className="min-w-0">
                       <div className="font-bold text-sm text-slate-900">{item.title}</div>
                       <div className="text-xs sm:text-[13px] text-slate-600 mt-0.5 leading-relaxed">
                         {item.desc}
@@ -94,23 +96,31 @@ export default function ProblemSolution() {
               </div>
             </div>
 
-            <div className="mt-8 pt-5 border-t border-rose-200/60 flex items-center justify-between text-xs font-semibold text-rose-800">
-              <span>Outcome: Dopamine fatigue &amp; creative stagnation</span>
-              <span className="text-rose-600 font-bold">Drain</span>
+            <div className="mt-8 pt-5 border-t border-rose-200 flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs text-rose-900">
+              <div className="flex items-center gap-2 min-w-0">
+                <span className="font-bold text-rose-700 shrink-0">Outcome:</span>
+                <span className="font-medium text-slate-600 leading-relaxed">Dopamine fatigue &amp; creative stagnation</span>
+              </div>
+              <span className="inline-flex items-center gap-1.5 self-start sm:self-auto shrink-0 whitespace-nowrap bg-rose-100 text-rose-800 border border-rose-300 px-3 py-1 rounded-full font-bold text-xs shadow-2xs">
+                <span>Drain</span>
+                <span>📉</span>
+              </span>
             </div>
           </div>
 
           {/* Solution Card (The EduEden Way) */}
-          <div className="bg-gradient-to-b from-emerald-50/90 to-[#f0fdf4] rounded-[32px] sm:rounded-[36px] p-6 sm:p-9 border-2 border-emerald-300 shadow-md flex flex-col justify-between relative overflow-hidden ring-1 ring-emerald-500/20">
+          <div className="bg-gradient-to-b from-emerald-50/90 to-[#f0fdf4] rounded-[32px] sm:rounded-[36px] p-6 sm:p-9 border-2 border-emerald-400 shadow-md flex flex-col justify-between relative overflow-hidden">
             <div className="absolute top-0 right-0 w-48 h-48 bg-emerald-400/20 rounded-full blur-3xl pointer-events-none" />
 
             <div>
-              <div className="flex items-center justify-between mb-6">
-                <span className="inline-flex items-center gap-2 bg-emerald-100 text-[#0c432d] font-extrabold text-xs uppercase tracking-wider px-3.5 py-1.5 rounded-full border border-emerald-300 shadow-2xs">
-                  <Cpu className="w-3.5 h-3.5 text-[#10b981]" />
+              <div className="flex flex-wrap items-center justify-between gap-2.5 mb-6">
+                <span className="inline-flex items-center gap-1.5 bg-emerald-100 text-[#0c432d] font-bold text-xs px-3.5 py-1.5 rounded-full border border-emerald-300 shadow-2xs whitespace-nowrap shrink-0">
+                  <Cpu className="w-3.5 h-3.5 text-[#10b981] shrink-0" />
                   <span>The EduEden Transformation</span>
                 </span>
-                <span className="text-xs font-bold text-[#15803d]">Creative Creator</span>
+                <span className="inline-flex items-center text-xs font-bold text-[#15803d] bg-white/80 border border-emerald-200 px-3 py-1 rounded-full whitespace-nowrap shrink-0">
+                  Creative Creator
+                </span>
               </div>
 
               <h3 className="font-serif-brand font-bold text-xl sm:text-2xl text-[#0c432d] mb-6">
@@ -119,9 +129,9 @@ export default function ProblemSolution() {
 
               <div className="space-y-4">
                 {solutions.map((item, idx) => (
-                  <div key={idx} className="flex items-start gap-3.5 p-3.5 rounded-2xl bg-white/90 border border-emerald-200/80 shadow-2xs">
+                  <div key={idx} className="flex items-start gap-3.5 p-3.5 rounded-2xl bg-white/90 border border-emerald-200/90 shadow-2xs">
                     <CheckCircle2 className="w-5 h-5 text-[#10b981] shrink-0 mt-0.5" />
-                    <div>
+                    <div className="min-w-0">
                       <div className="font-bold text-sm text-[#0c432d]">{item.title}</div>
                       <div className="text-xs sm:text-[13px] text-[#1e4635] mt-0.5 leading-relaxed">
                         {item.desc}
@@ -132,9 +142,15 @@ export default function ProblemSolution() {
               </div>
             </div>
 
-            <div className="mt-8 pt-5 border-t border-emerald-200 flex items-center justify-between text-xs font-semibold text-[#0c432d]">
-              <span>Outcome: Creative confidence &amp; computational fluency</span>
-              <span className="text-[#10b981] font-bold">Growth 🌱</span>
+            <div className="mt-8 pt-5 border-t border-emerald-200 flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs text-[#0c432d]">
+              <div className="flex items-center gap-2 min-w-0">
+                <span className="font-bold text-[#15803d] shrink-0">Outcome:</span>
+                <span className="font-medium text-[#1e4635] leading-relaxed">Creative confidence &amp; computational fluency</span>
+              </div>
+              <span className="inline-flex items-center gap-1.5 self-start sm:self-auto shrink-0 whitespace-nowrap bg-emerald-100/90 text-[#0c432d] border border-emerald-300 px-3 py-1 rounded-full font-bold text-xs shadow-2xs">
+                <span>Growth</span>
+                <span>🌱</span>
+              </span>
             </div>
           </div>
         </div>

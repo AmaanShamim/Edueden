@@ -260,7 +260,7 @@ export default function ProjectShowcase() {
           <div
             ref={scrollContainerRef}
             onScroll={updateScrollState}
-            className="flex md:grid md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 md:gap-8 overflow-x-auto md:overflow-visible scroll-smooth snap-x snap-mandatory py-4 px-1 -mx-5 px-5 md:mx-0 md:px-0 no-scrollbar [&::-webkit-scrollbar]:hidden"
+            className="flex md:grid md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 md:gap-8 overflow-x-auto md:overflow-visible scroll-smooth snap-x snap-mandatory py-4 px-1 md:px-0 no-scrollbar [&::-webkit-scrollbar]:hidden"
             style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
           >
             {filteredProjects.map((project) => (
