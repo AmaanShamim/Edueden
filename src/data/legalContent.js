@@ -356,4 +356,50 @@ Following every cohort, parents receive an exhaustive written Milestone Evaluati
       },
     ],
   },
+  terms: {
+    title: "EduEden Terms of Service & Academy Enrollment Agreement",
+    lastUpdated: "November 2026 • Version 2.4",
+    sections: [
+      {
+        heading: "1. Acceptance of Terms",
+        content: `Welcome to EduEden Academy ("EduEden", "we", "our", or "us"). By booking a complimentary demo class, enrolling in a mentored cohort, accessing our virtual learning classrooms, or utilizing any services hosted at edueden.online, you (the parent or legal guardian) agree to be bound by these Terms of Service. If you do not agree to these terms, please do not register for or participate in EduEden programs.`,
+      },
+      {
+        heading: "2. Free 45-Minute Demo Class Terms",
+        content: `• Zero-Risk Exploration: Our complimentary 45-minute demo session requires no credit card on file, incurs zero billing commitments, and carries no obligation to enroll in paid cohorts.
+• Personalized Assessment: Following the demo session, your child's assigned certified mentor provides a personalized Cognitive Readiness & Milestone Evaluation.
+• Capacity & Attendance: Demo sessions are subject to mentor availability. We ask that parents notify us at least 6 hours in advance if a demo session must be rescheduled.`,
+      },
+      {
+        heading: "3. 1:4 Cohort Scheduling, Attendance & Makeup Policy",
+        content: `• Strict 1:4 Student-Mentor Ratio: All group classes are capped at a maximum of four (4) students to guarantee intimate, individualized attention.
+• Scheduled Class Times: Sessions meet weekly at mutually selected time slots. Class links are transmitted securely via email and WhatsApp.
+• Free Makeup Sessions: If a child must miss a session due to illness or family conflict, parents may request a free makeup class or 1-on-1 mentor catch-up block with at least 12 hours prior notification (up to 2 makeup sessions per semester).
+• Equipment Requirements: Students require a desktop or laptop computer (Windows, macOS, or Chromebook), a stable internet connection, an active webcam, and a working microphone.`,
+      },
+      {
+        heading: "4. Student Code of Conduct & Safe Learning Environment",
+        content: `• Mutual Respect: EduEden classrooms are encouraging, joyful, and inclusive spaces. Any form of harassment, cyberbullying, offensive language, or disruptive behavior will result in immediate removal from the cohort.
+• Kid-Safe AI & Cloud Safety: Students must adhere to mentor guidelines when experimenting with kid-safe AI and cloud tools. Students may not attempt to circumvent platform filters, access unapproved external sites, or share private credentials with classmates.`,
+      },
+      {
+        heading: "5. Intellectual Property & Student Project Ownership",
+        content: `• 100% Student Ownership: Students retain absolute, 100% intellectual property ownership of every game, story, script, and AI invention they design and build at EduEden.
+• Open Portfolio Rights: Students and families are free to publish, share, and expand upon their projects indefinitely on personal Scratch, ScratchJr, or GitHub accounts.
+• Academy Curriculum Rights: EduEden retains exclusive intellectual property rights over all proprietary curriculum slides, lesson outlines, pedagogical exercises, and instructional materials provided during classes.`,
+      },
+      {
+        heading: "6. Tuition, Billing, Cancellation & 100% Money-Back Guarantee",
+        content: `• Transparent Pricing: Cohort tuition is billed transparently without hidden administrative fees, surprise renewals, or long-term lock-in contracts.
+• 100% Happiness Money-Back Guarantee: If within the first two (2) paid sessions you feel EduEden is not the ideal fit for your child, notify our support team for a full 100% refund of your cohort tuition, no questions asked.
+• Cancellation: Parents may pause or cancel upcoming billing cycles at any time with 7 days' advance written notice prior to the start of the subsequent monthly period.`,
+      },
+      {
+        heading: "7. Governing Law, Registered Entity & Support Contact",
+        content: `• Operating Entity: EduEden Academy Private Limited, 1207, Sector 62, Noida, NCR 201309, India.
+• Governing Law: These Terms are governed by the laws applicable to digital educational service agreements.
+• Official Support & Queries: For billing, scheduling, or terms inquiries, reach our team at support@edueden.online or via WhatsApp at +91-9153573335.`,
+      },
+    ],
+  },
 };

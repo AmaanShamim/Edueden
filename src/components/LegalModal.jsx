@@ -5,6 +5,7 @@ import {
   ShieldCheck,
   HeartHandshake,
   BookOpen,
+  FileText,
   Phone,
   Mail,
 } from "lucide-react";
@@ -34,6 +35,11 @@ export default function LegalModal({ isOpen, activeTab, onClose, onTabChange }) 
   const currentDoc = legalDocuments[activeTab] || legalDocuments.privacy;
 
   const tabs = [
+    {
+      id: "terms",
+      label: "Terms of Service",
+      icon: <FileText className="w-4 h-4 text-[#10b981]" />,
+    },
     {
       id: "privacy",
       label: "Privacy Policy",

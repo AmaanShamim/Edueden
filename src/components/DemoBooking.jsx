@@ -212,6 +212,11 @@ export default function DemoBooking() {
         );
       }
       setFormSubmitted(true);
+      try {
+        window.history.pushState(null, "", "#thank-you");
+      } catch {
+        // ignore
+      }
     } catch (err) {
       console.error("Failed to submit demo booking:", err);
       setErrorMessage(

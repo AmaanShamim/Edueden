@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 import "./App.css";
 import TopBanner from "./components/TopBanner";
 import Navbar from "./components/Navbar";
@@ -17,19 +18,22 @@ import Founder from "./components/Founder";
 import Footer from "./components/Footer";
 import LegalModal from "./components/LegalModal";
 import WhatsAppButton from "./components/WhatsAppButton";
+import StickyMobileCTA from "./components/StickyMobileCTA";
+import CookieBanner from "./components/CookieBanner";
 
 export default function App() {
-  const [legalDoc, setLegalDoc] = useState(null); // "privacy" | "safety" | "pedagogy" | null
+  const [legalDoc, setLegalDoc] = useState(null); // "terms" | "privacy" | "safety" | "pedagogy" | null
 
   useEffect(() => {
     const checkHash = () => {
       const hash = window.location.hash.toLowerCase();
-      if (hash === "#privacy") {
+      if (hash === "#terms" || hash === "#terms-of-service") {
+        setLegalDoc("terms");
+      } else if (hash === "#privacy") {
         setLegalDoc("privacy");
       } else if (
         hash === "#safety" ||
-        hash === "#safety-charter" ||
-        hash === "#terms"
+        hash === "#safety-charter"
       ) {
         setLegalDoc("safety");
       } else if (
@@ -103,7 +107,10 @@ export default function App() {
         onClose={handleCloseLegal}
         onTabChange={(type) => handleOpenLegal(type)}
       />
+      <StickyMobileCTA />
+      <CookieBanner onOpenPrivacy={handleOpenLegal} />
       <Analytics />
+      <SpeedInsights />
     </div>
   );
 }

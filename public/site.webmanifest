@@ -1,0 +1,21 @@
+{
+  "name": "EduEden Academy: K-8 Coding & Kid-Safe AI",
+  "short_name": "EduEden",
+  "description": "Where Young Minds Play, Code & Grow! Live 1:4 Mentored Coding for Kids Ages 5-14.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0c432d",
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}

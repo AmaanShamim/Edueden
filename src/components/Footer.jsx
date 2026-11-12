@@ -78,9 +78,14 @@ export default function Footer({ onOpenLegal }) {
               <Mail className="w-4 h-4 text-[#f59e0b]" />
               <span>support@edueden.online</span>
             </li>
-            <li className="flex items-center gap-2.5">
-              <MapPin className="w-4 h-4 text-[#f59e0b]" />
-              <span>Global Live Virtual Classrooms</span>
+            <li className="flex items-start gap-2.5">
+              <MapPin className="w-4 h-4 text-[#f59e0b] shrink-0 mt-0.5" />
+              <span>
+                EduEden Academy • 1207, Sector 62, Noida, NCR 201309, India
+                <span className="block text-xs text-emerald-300/80 mt-0.5">
+                  Live Online Virtual Classrooms Globally
+                </span>
+              </span>
             </li>
           </ul>
         </div>
@@ -91,6 +96,13 @@ export default function Footer({ onOpenLegal }) {
           © {new Date().getFullYear()} EduEden: Play &amp; Grow K-8. All rights reserved.
         </p>
         <div className="flex flex-wrap gap-4 sm:gap-6">
+          <button
+            type="button"
+            onClick={() => (onOpenLegal ? onOpenLegal("terms") : (window.location.hash = "#terms"))}
+            className="hover:underline hover:text-white transition-colors cursor-pointer text-xs text-emerald-300"
+          >
+            Terms of Service
+          </button>
           <button
             type="button"
             onClick={() => (onOpenLegal ? onOpenLegal("privacy") : (window.location.hash = "#privacy"))}
